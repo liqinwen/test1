@@ -1,4 +1,5 @@
 package com.cy.cookie;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +14,9 @@ public class TestCookie extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		//返回页面上一次的访问时间
 		Date date = new Date();
-		System.out.println(date);
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+		String d=sdf.format(date);
+		System.out.println(d);
 	}
 }
 	
